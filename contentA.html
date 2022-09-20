@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roquero page2</title>
+
+    <link href="normalize.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="main.js" defer></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    
+    <main>
+        <header>
+            <nav class="navibar"> 
+                <a href="#" class="navi-branding">Logo</a>
+              
+                <ul class="navi-menu">
+                    <li class="navi-item">
+                        <a href="./index.html" class="navi-link">Home</a>
+                    </li>
+                    <li class="navi-item">
+                        <a href="#" class="navi-link">Guitars</a>
+                    </li>
+                    <li class="navi-item">
+                        <a href="#" class="navi-link">Amps</a>
+                    </li>
+                    <li class="navi-item">
+                        <a href="#" class="navi-link">Pedals</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>      
+        </header>
+
+        <section class="wrapper">
+            <!-- landing area -->
+            <div id="landing">
+                <div id="landing-text">
+                    <div id="landing-text-inner">
+                        <h4 id="gibsonText">Gibson</h4>                 
+                        <h3>Les Paul</h3>                
+                        <a href="#" class="btn" id="view-work-b">Buy</a>
+                    </div>
+                </div>
+            </div>
+             
+            <!-- guitar image section  -->
+            <div id="landingGuitarImages">              
+                <img class="guitarsBox" src="./img/Gibon guitars Collection.jpeg" alt="guitar image">
+
+                <div class="caption-block">
+                        <!-- customise section -->
+                    <div class="caption">           
+                        <p>Want to personalise it?</p>
+                        <p>Pick a colour</p>
+                        
+                        <button id="myBtn">Customise</button>
+
+                        <!--  modal section -->
+                        <div id="myModal" class="modal">
+                            <!-- modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <!-- insert checkbox form here -->
+                                <div class="formWrapper">
+                                    <div class="regForm">
+                                        <h1>Customise Your Guitar</h1>
+                                    </div>
+                                    <div class="form-container">
+                                        <form name="form" onsubmit="return check()">
+                                            <div class="modal-content-container">
+                                                <div>
+                                                    <h2 id="customer">Select Guitar Colour</h2>
+                                                    <label class="radio">
+                                                        <input class="radio-one" type="radio" value="selectCherry" checked="checked" name="lpGuitarColour">
+                                                        <span class="checkmark"></span>Cherry Burst
+                                                    </label> <br>
+                                                    <label class="radio">
+                                                        <input class="radio-two" type="radio" value="selectGold" name="lpGuitarColour">
+                                                        <span class="checkmark"></span>Gold Top
+                                                    </label> <br>
+                                                    <label class="radio">
+                                                        <input class="radio-three" type="radio" value="selectTobacco" name="lpGuitarColour">
+                                                        <span class="checkmark"></span>Tobacco Burst
+                                                    </label> <br>
+                                                    <label class="radio">
+                                                        <input class="radio-four" type="radio" value="selectTransCherry" name="lpGuitarColour">
+                                                        <span class="checkmark"></span>Translucent Cherry
+                                                    </label> <br>
+                                                    <label class="radio">
+                                                        <input class="radio-five" type="radio" value="selectBourbon" name="lpGuitarColour">
+                                                        <span class="checkmark"></span>Bourbon Burst
+                                                    </label> <br>
+                                                    <label class="radio">
+                                                        <input class="radio-six" type="radio" value="selectGraphite" name="lpGuitarColour">
+                                                        <span class="checkmark"></span>Graphite Black
+                                                    </label> <br>
+                                                    <label class="radio">
+                                                        <input class="radio-seven" type="radio" value="selectRedWine" name="lpGuitarColour">
+                                                        <span class="checkmark"></span>Red Wine
+                                                    </label> 
+                                                </div>                                              
+                                            </div>
+                                            <div class="modal-button-container">
+                                                <button id="modalUpdateBtn" type="submit">Update</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tech Specs section -->
+                    <div class="caption">           
+                        <p>BurstBucker pickups</p>
+                        <p>Solid Mahogany</p>
+                        <button href="#" id="techSpec-button">Technical Specs</button>
+                    </div>
+
+                    <!-- Compare section -->
+                    <div class="caption">           
+                        <p> Still deciding?</p>
+                        <p>Compare with other guitars</p>
+                        <button href="#" id="compare-button">Compare</button>
+                    </div>
+                </div>
+            </div>        
+        </section>
+
+        <footer class="roquero-footer">
+            <p>© Roquero Inc.</p>
+            <p>Email &#128231 or call us &#128222  or... don't...I dont care!</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
