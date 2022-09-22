@@ -99,8 +99,6 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     transition: 0.6s ease all; 
-    position: relative;   /* not sure if this one works */
-    text-align: center;   /* not sure if this one works */
   }
 
   /* text & button position and text color */
@@ -150,7 +148,7 @@
 
 /* ---- end all styling for index.html file ---- */
 
-/* ----- styling for Guitars (2nd) page starts here----- */
+/* ----- styling for Guitars (2nd) page contentA.html starts here----- */
   /* modal styling */
  .modal {
     display: none;    /*to hide in webpage */
@@ -216,20 +214,9 @@
   background-color: #5390F5;
 }
 
-
-
 /* navbar styling */
 header {
   background-color: #262626;
-}
-
-li {
-  list-style: none;
-}
-
-.navi-menu a {
-  color: white;
-  text-decoration: none;
 }
 
 .navibar {
@@ -237,18 +224,31 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 14px;
-}
-
-.navi-menu {
-display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 60px;
+  padding: 5px 20px;
 }
 
 .navi-branding {
   font-size: 2rem;
+}
+
+.navi-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+} 
+
+.navi-menu li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navi-menu li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 1rem;
 }
 
 .navi-link {
@@ -257,6 +257,8 @@ display: flex;
 
 .navi-link:hover {
   color: dodgerblue;
+  text-decoration: none;
+  background-color: #555;
 }
 
 .hamburger {
@@ -275,52 +277,39 @@ display: flex;
 }
 
 @media (max-width: 768px) {
-   .hamburger {
-  display: block;
-}
-  .hamburger.active .bar:nth-child(2) {   /* for bar 2 opacity will be zero */
-    opacity: 0;
-  }
-  .hamburger.active .bar:nth-child(1) {   /* for bar 1 opacity will be zero */
-    transform: translateY(8px) rotate(45deg);
-}
-  .hamburger.active .bar:nth-child(3) {   /* for bar 3 opacity will be zero */
-    transform: translateY(-8px) rotate(-45deg); 
-}
-  .navi-menu {
-    position: fixed;    /* when scroll down menu is still visible */
-    left: -100%;      /* hide from view */
-    top: 70px;      /* of the top */
-    gap: 0;
-    flex-direction: column;      /* links appear in a column */
-    background-color: #262626;
-    width: 100%;        /* menu to take up whole screen */
-    text-align: center;
-    transition: 0.3s;     /* links take 0.3s to appear on screen */
-  }
+    .hamburger {
+      display: block;
+    }
+    .hamburger.active .bar:nth-child(2) {   /* for bar 2 opacity will be zero */
+      opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {   /* for bar 1 opacity will be zero */
+      transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {   /* for bar 3 opacity will be zero */
+      transform: translateY(-8px) rotate(-45deg); 
+    }
+    .navi-menu {
+      position: fixed;    /* when scroll down menu is still visible */
+      left: -100%;      /* hide from view */
+      top: 70px;      /* of the top */
+      gap: 0;
+      z-index: 5;     /* slideout menu stays on top */
+      flex-direction: column;      /* links appear in a column */
+      background-color: #262626;
+      width: 100%;        /* menu to take up whole screen */
+      text-align: center;
+      transition: 0.3s;     /* links take 0.3s to appear on screen */
+    }
   
-  .navi-item {
-    margin:  16px 0;
-  }
+    .navi-item {
+      margin:  16px 0;
+    }
   
   /* whenever active menu class want to display menu with js  */
-  .navi-menu.active {
-    left: 0;
-  }
-}
-
-#landing-text-inner h3 {
-  font-family: 'Arizonia', cursive;
-  font-weight: 400;
-  font-size: 3.5rem;
-  margin: 0;
-}
-
-#gibsonText {
-  font-family: 'Arizonia', cursive;
-  font-size: 90px;
-  color: rgba(159, 110, 42, 0.789);
-  margin: 0;
+    .navi-menu.active {
+      left: 0;
+    }
 }
 
 img {
@@ -336,18 +325,41 @@ img {
 
 #landing {
   background-image: url('./img/black-texture.jpg');
-  color: white;
+  color: white;     /* color of text 'Les Paul'*/
 }
 
 #landing-text {
   display: flex;
   flex: 0 1 40vw;
-  height: 30vh; /* height of white landing vp */
+  height: 30vh; /* height of text landing */
   justify-content: center;
   align-items: center;
   text-align: center;
   padding-right: 1rem;
   padding-left: 1rem;
+}
+
+#landing-text-inner h3 {
+  font-family: 'Arizonia', cursive;
+  font-weight: 400;
+  font-size: 3.5rem;
+  margin: 0;
+}
+
+#landing-text-inner {
+  position: relative;
+}
+
+#gibsonText {
+  font-family: 'Arizonia', cursive;
+  font-size: 90px;
+  color: rgba(159, 110, 42, 0.789);
+  margin: 0;
+}
+
+#view-work-b {
+  color: white;
+  border: 2px white solid;
 }
 
 /* includes white space in landing before image */ 
@@ -408,11 +420,6 @@ img {
 #compare-button:hover {
   border: 2px red solid;
   background: red;
-}
-
-#view-work-b {
-  color: white;
-  border: 2px white solid;
 }
 
 .roquero-footer {
